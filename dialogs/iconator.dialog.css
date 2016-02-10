@@ -1,0 +1,10 @@
+/* Required for Umbraco 7.4 (beta?) and above...
+ * I was copying the icon picker that is used on other Umbraco views,
+ * but the content view when you're looking at a node has a class ".row-fluid"
+ * which is a parent class of this overlay, this causes the classes that were
+ * written for this new icon picker to get overwritten.
+ * */
+.iconator-dialog .thumbnails .span1 {
+	width:60px;
+	font-size:32px;
+}
