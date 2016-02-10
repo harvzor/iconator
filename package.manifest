@@ -1,0 +1,60 @@
+{
+	propertyEditors: [
+		{
+			alias: 'Iconator',
+			name: 'Iconator',
+			valueType: 'JSON',
+			editor: {
+				view: '~/App_Plugins/iconator/iconator.html',
+				hideLabel: false
+			},
+			prevalues: {
+				fields: [
+					{
+						label: 'Path to stylesheet',
+						description: 'Relative path to the stylesheet',
+						key: 'cssPath',
+						view: 'requiredfield',
+						validation: [
+							{
+								type: 'Required' 
+							}
+						]
+					},
+					{
+						label: 'Class name regex',
+						description: 'Regex pattern that matches the class names',
+						key: 'cssRegex',
+						view: 'requiredfield',
+						validation: [
+							{
+								type: 'Required' 
+							}
+						]
+					},
+					{
+						label: 'Exclusion list',
+						description: 'Comma delimited list of styles to exclude (must match what the regex will find)',
+						key: 'excludeList',
+						view: 'TextString'
+					},
+					{
+						label: 'Icon pattern',
+						description: 'Html pattern to display icon, default: &lt;i class="icon icon-{0}"&gt;&lt;/i&gt;',
+						key: 'iconPattern',
+						view: 'TextString'
+					}
+				]
+			}
+		}
+	],
+	parameterEditors:[],
+	javascript: [
+		'~/app_plugins/iconator/iconator.controller.js',
+		'~/app_plugins/iconator/dialogs/iconator.dialog.controller.js'
+	],
+	css: [
+		'~/app_plugins/iconator/iconator.css',
+		'~/app_plugins/iconator/dialogs/iconator.dialog.css'
+	]
+}

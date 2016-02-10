@@ -1,0 +1,13 @@
+<div ng-controller="Iconator.Controller" class="iconator">
+	<div class="iconator-icon" ng-click="openIconPickerDialog()">
+		<span ng-hide="model.value">Pick an icon...</span>
+		<span ng-bind-html="renderIconPattern(model.value)" style="font-size:32px;"></span>
+	</div>
+	<!-- >= Umbraco 7.4 -->
+	<umb-overlay
+		ng-if="overlay.show"
+		model="overlay"
+		view="overlay.view"
+		position="right">
+	</umb-overlay>
+</div>
