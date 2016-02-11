@@ -6,7 +6,6 @@ angular.module("umbraco").controller("Iconator.Controller", function ($scope, $h
 	$scope.icons = [];
 	$scope.icon = '';
 	$scope.iconPattern = '<i class="{0}"></i>';
-	// >= Umbraco 7.4
 	$scope.overlay = {
 		view: '/app_plugins/iconator/dialogs/iconator.dialog.html',
 		width: 500,
@@ -31,19 +30,6 @@ angular.module("umbraco").controller("Iconator.Controller", function ($scope, $h
 	//////////////////////
 	
 	$scope.openIconPickerDialog = function() {
-		// < Umbraco 7.4
-		/*
-		dialogService.open({
-			template: '/app_plugins/iconator/dialogs/iconator.dialog.html',
-			width: 500,
-			show: true,
-			callback: function(icon) {
-				$scope.model.value = icon;
-			},
-			dialogData: $scope.icons
-		});
-		*/
-
 		$scope.overlay.show = true;
 		$scope.overlay.icons = $scope.icons;
 		$scope.overlay.renderIconPattern = $scope.renderIconPattern;
