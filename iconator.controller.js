@@ -1,4 +1,4 @@
-angular.module("umbraco").controller("Iconator.Controller", function ($scope, $http, assetsService, /*dialogService,*/ notificationsService) {
+angular.module("umbraco").controller("Iconator.Controller", function ($scope, $http, assetsService, dialogService, notificationsService) {
 	////////////////
 	// Setup
 	////////////////
@@ -6,21 +6,6 @@ angular.module("umbraco").controller("Iconator.Controller", function ($scope, $h
 	$scope.icons = [];
 	$scope.icon = '';
 	$scope.iconPattern = '<i class="{0}"></i>';
-	// >= Umbraco 7.4
-	$scope.overlay = {
-		view: '/app_plugins/iconator/dialogs/iconator.dialog.html',
-		width: 500,
-		show: false,
-		title: 'Select an icon',
-		selectIcon: function(icon) {
-			$scope.overlay.show = false;
-
-			$scope.model.value = icon;
-		},
-		close: function() {
-			$scope.overlay.show = false;
-		}
-	};
 
 	if ($scope.model.config.iconPattern != null && $scope.model.config.iconPattern != '') {
 		$scope.iconPattern = $scope.model.config.iconPattern;
@@ -31,8 +16,6 @@ angular.module("umbraco").controller("Iconator.Controller", function ($scope, $h
 	//////////////////////
 	
 	$scope.openIconPickerDialog = function() {
-		// < Umbraco 7.4
-		/*
 		dialogService.open({
 			template: '/app_plugins/iconator/dialogs/iconator.dialog.html',
 			width: 500,
@@ -40,14 +23,11 @@ angular.module("umbraco").controller("Iconator.Controller", function ($scope, $h
 			callback: function(icon) {
 				$scope.model.value = icon;
 			},
-			dialogData: $scope.icons
+			dialogData: {
+				icons: $scope.icons,
+				renderIconPattern: $scope.renderIconPattern
+			}
 		});
-		*/
-
-		$scope.overlay.show = true;
-		$scope.overlay.icons = $scope.icons;
-		$scope.overlay.renderIconPattern = $scope.renderIconPattern;
-		$scope.overlay.iconPattern = $scope.iconPattern;
 	};
 
 	// Write out the HTML for the current element class name using the icon pattern.
