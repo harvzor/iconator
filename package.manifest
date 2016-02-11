@@ -40,7 +40,7 @@
 					},
 					{
 						label: 'Icon pattern',
-						description: 'Html pattern to display icon, default: &lt;i class="icon icon-{0}"&gt;&lt;/i&gt;',
+						description: 'Html pattern to display icon, default: &lt;i class="{0}"&gt;&lt;/i&gt;',
 						key: 'iconPattern',
 						view: 'TextString'
 					}
