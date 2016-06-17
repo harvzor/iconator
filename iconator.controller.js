@@ -55,9 +55,6 @@ angular.module("umbraco").controller("Iconator.Controller", function ($scope, $h
 			excludeList = "";
 		}
 
-		// Load the supplied css stylesheet using the umbraco assetsService
-		assetsService.loadCss(cssPath);
-
 		// Get the class names from the specified stylesheet,
 		// use angular http request to make a cached request for the stylesheet content.
 		$http({
@@ -101,6 +98,13 @@ angular.module("umbraco").controller("Iconator.Controller", function ($scope, $h
 			notificationsService.error('An error has occured.', 'Stylesheet or file ' + cssPath + ' not found on server.');
 			isError = true;
 		});
+
+		if (!/css$/.test(cssPath)) {
+			cssPath = cssPath.split('.')[0] + '.css';
+		}
+
+		// Load the supplied css stylesheet using the umbraco assetsService
+		assetsService.loadCss(cssPath);
 
 		return matches;
 	};
