@@ -8,11 +8,21 @@ This is a fork of https://github.com/rhythmagency/rhythm.umbraco7.font-awesome-i
 
 ## How to install
 
-### Using NuGet
+### Using NuGet (recommended)
 
 In Visual Studio, open up the Package Manager Console and type the following:
 
 ```install-package Umbraco.Iconator <project name>```
+
+### Using the Umbraco package
+
+If you prefer, you can upload a ZIP into Umbraco and it will install the package for you.
+
+Note: The Umbraco repository appears to be currently broken, so you have to manually upload a local ZIP from your file system.
+
+1. Download the ZIP file from this repository (named Iconator_1.0.0.zip)
+2. Navigation to the Developer section, and find the Packages option in the tree
+3. Upload the ZIP
 
 ### Manually
 
