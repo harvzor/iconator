@@ -44,3 +44,11 @@ You have to manually create the data type in Umbraco yourself.
 7. Save!
 8. Add this new data type to a document type in the settings section
 9. Donezo!
+
+## Screenshots
+
+Editing the data type:
+![Icon Picker Data Type](https://github.com/HarveyWilliams/Iconator/blob/umbraco7.4/screenshots/IconPickerDataType.png "Icon Picker Data Type")
+
+Using the data type in Umbraco:
+![Icon Picker Dialog](https://github.com/HarveyWilliams/Iconator/blob/umbraco7.4/screenshots/IconPickerDialog.png "Icon Picker Dialog")
