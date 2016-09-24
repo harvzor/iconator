@@ -6,6 +6,10 @@ Iconator is a custom data type that allows an editor to select a class for a cus
 
 This is a fork of https://github.com/rhythmagency/rhythm.umbraco7.font-awesome-icon-picker except it allows you to use any icons from a custom CSS file. The UI has also been updated to seamlessly integrate with Umbraco 7.
 
+## Requirements
+
+- Umbraco 7.4 or later (or use the umbraco7.0 branch)
+
 ## How to install
 
 ### Using NuGet (recommended)
