@@ -12,6 +12,8 @@ This is a fork of https://github.com/rhythmagency/rhythm.umbraco7.font-awesome-i
 
 ## How to install
 
+You can watch a video which shows installation and setup: https://www.youtube.com/watch?v=5AIyf7w47K0
+
 ### Using NuGet (recommended)
 
 In Visual Studio, open up the Package Manager Console and type the following:
