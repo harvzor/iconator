@@ -1,1 +1,19 @@
-.iconator .iconator-icon {cursor:pointer;}
+.iconator .iconator-icon span {
+	cursor:pointer;
+}
+
+.iconator .iconator-icon span:hover {
+	text-decoration:underline;
+}
+
+.iconator .iconator-remove {
+	margin-top:10px;
+}
+
+.iconator .iconator-remove span {
+	cursor:pointer;
+}
+
+.iconator .iconator-remove span:hover {
+	text-decoration:underline;
+}

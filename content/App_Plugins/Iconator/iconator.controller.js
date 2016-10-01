@@ -4,7 +4,6 @@ angular.module("umbraco").controller("Iconator.Controller", function ($scope, $h
 	////////////////
 	
 	$scope.icons = [];
-	$scope.icon = '';
 	$scope.iconPattern = '<i class="{0}"></i>';
 	$scope.overlay = {
 		view: '/app_plugins/iconator/dialogs/iconator.dialog.html',
@@ -26,21 +25,9 @@ angular.module("umbraco").controller("Iconator.Controller", function ($scope, $h
 	};
 
 	//////////////////////
-	// Scope functions
+	// Private functions
 	//////////////////////
 	
-	$scope.openIconPickerDialog = function() {
-		$scope.overlay.show = true;
-		$scope.overlay.icons = $scope.icons;
-		$scope.overlay.renderIconPattern = $scope.renderIconPattern;
-		$scope.overlay.iconPattern = $scope.iconPattern;
-	};
-
-	// Write out the HTML for the current element class name using the icon pattern.
-	$scope.renderIconPattern = function (currentClassName) {
-		return $scope.iconPattern.replace("{0}", currentClassName);
-	};
-
 	// Get the matching class names from the stylesheet
 	var getClassNames = function () {
 		var cssPath = $scope.model.config.cssPath;
@@ -107,6 +94,26 @@ angular.module("umbraco").controller("Iconator.Controller", function ($scope, $h
 		assetsService.loadCss(cssPath);
 
 		return matches;
+	};
+
+	//////////////////////
+	// Scope functions
+	//////////////////////
+	
+	$scope.openIconPickerDialog = function() {
+		$scope.overlay.show = true;
+		$scope.overlay.icons = $scope.icons;
+		$scope.overlay.renderIconPattern = $scope.renderIconPattern;
+		$scope.overlay.iconPattern = $scope.iconPattern;
+	};
+
+	// Write out the HTML for the current element class name using the icon pattern.
+	$scope.renderIconPattern = function (currentClassName) {
+		return $scope.iconPattern.replace("{0}", currentClassName);
+	};
+
+	$scope.remove = function() {
+		$scope.model.value = '';
 	};
 
 	//////////////
