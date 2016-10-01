@@ -10,6 +10,10 @@ This is a fork of https://github.com/rhythmagency/rhythm.umbraco7.font-awesome-i
 
 - Umbraco 7.4 or later (or use the umbraco7.0 branch)
 
+## Known bugs
+
+Umbraco uses icon classes of style "icon-{{class-name}}". If you name one of your icon classes the same as any of the icons in Umbraco, your icon will replace them.
+
 ## How to install
 
 You can watch a video which shows installation and setup: https://www.youtube.com/watch?v=5AIyf7w47K0
@@ -70,3 +74,22 @@ Using the data type in Umbraco:
 
 ![Icon Picker Dialog](https://github.com/HarveyWilliams/Iconator/blob/umbraco7.4/screenshots/IconPickerDialog.png "Icon Picker Dialog")
 
+## Contributing
+
+If you have any suggestions on how to make this package better, please use the issue tracker or make amendments to the code. I'll try my best to keep this repo up to date.
+
+### On Our Umbraco
+
+Head to https://our.umbraco.org/projects/backoffice-extensions/iconator/ and report compatibility with any Umbraco versions you have tested on.
+
+Vote for the package if you like it. ;)
+
+### Bugs
+
+If you find any bugs, please use the issue tracker on GitHub to report it!
+
+### Making changes
+
+Feel free to contribute to this package by making changes to any of the files in the repository.
+
+You can optionally use Gulp when making changes to the files. The Gulp file is setup to move the files from the ./content/ folder to your Umbraco installation. Just update the config.json file with a path to your Umbraco installation and run gulp. Any changes you make will be copied to your installation.
