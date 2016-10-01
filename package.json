@@ -1,0 +1,22 @@
+{
+  "name": "Iconator",
+  "version": "1.0.0",
+  "description": "Iconator is an Umbraco datatype that allows the picking of CSS icon classes.",
+  "main": "gulpfile.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/HarveyWilliams/Iconator.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/HarveyWilliams/Iconator/issues"
+  },
+  "homepage": "https://github.com/HarveyWilliams/Iconator",
+  "devDependencies": {
+    "gulp": "^3.9.1"
+  }
+}
