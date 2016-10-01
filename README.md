@@ -20,15 +20,24 @@ In Visual Studio, open up the Package Manager Console and type the following:
 
 ```install-package Umbraco.Iconator <project name>```
 
-### Using the Umbraco package
+### Using the Umbraco package manager
+
+Umbraco has a package manager built into it.
+
+1. Navigate to the Developer section of Umbraco
+2. Click on the packages item in the Tree
+3. Search for Iconator, click on the relevent result
+4. Click install
+
+### Using the Umbraco package manually
 
 If you prefer, you can upload a ZIP into Umbraco and it will install the package for you.
 
-Note: The Umbraco repository appears to be currently broken, so you have to manually upload a local ZIP from your file system.
-
-1. Download the ZIP file from this repository (named Iconator_1.0.0.zip)
-2. Navigation to the Developer section, and find the Packages option in the tree
-3. Upload the ZIP
+1. Head to https://our.umbraco.org/projects/backoffice-extensions/iconator/
+2. Download the package
+3. Navigation to the Developer section of Umbraco
+4. Click on the packages item in the Tree
+5. Upload the ZIP and install
 
 ### Manually
 
@@ -60,3 +69,4 @@ Editing the data type:
 Using the data type in Umbraco:
 
 ![Icon Picker Dialog](https://github.com/HarveyWilliams/Iconator/blob/umbraco7.4/screenshots/IconPickerDialog.png "Icon Picker Dialog")
+
