@@ -2,14 +2,14 @@
 <package >
   <metadata>
     <id>Umbraco.Iconator</id>
-    <version>1.1.0</version>
+    <version>1.1.1</version>
     <authors>Harvey Williams</authors>
     <owners></owners>
     <licenseUrl>https://opensource.org/licenses/MIT</licenseUrl>
     <projectUrl>https://github.com/HarveyWilliams/Iconator</projectUrl>
     <requireLicenseAcceptance>false</requireLicenseAcceptance>
     <description>Iconator is an Umbraco datatype that allows the picking of CSS icon classes.</description>
-    <releaseNotes>Initial release.</releaseNotes>
+    <releaseNotes></releaseNotes>
     <tags>Umbraco CSS icon icons datatype iconator</tags>
   </metadata>
 </package>
