@@ -2,7 +2,7 @@ angular.module("umbraco").controller("Iconator.Controller", function ($scope, $h
 	////////////////
 	// Setup
 	////////////////
-	
+
 	$scope.icons = [];
 	$scope.iconPattern = '<i class="{0}"></i>';
 	$scope.overlay = {
@@ -27,7 +27,7 @@ angular.module("umbraco").controller("Iconator.Controller", function ($scope, $h
 	//////////////////////
 	// Private functions
 	//////////////////////
-	
+
 	// Get the matching class names from the stylesheet
 	var getClassNames = function () {
 		var cssPath = $scope.model.config.cssPath;
@@ -45,7 +45,7 @@ angular.module("umbraco").controller("Iconator.Controller", function ($scope, $h
 		// Get the class names from the specified stylesheet,
 		// use angular http request to make a cached request for the stylesheet content.
 		$http({
-			method: 'GET', 
+			method: 'GET',
 			url: cssPath,
 			cache: true
 		})
@@ -65,7 +65,7 @@ angular.module("umbraco").controller("Iconator.Controller", function ($scope, $h
 					// check if match has populated array
 					if (match != null && match.length > 1) {
 						//check if array already contains match and not on exclude list
-						if (!(matches.indexOf(match[1]) > 0) && !(excludeList.split(',').indexOf(match[1]) > 0)) {
+						if (matches.indexOf(match[1]) === -1 && excludeList.split(',').indexOf(match[1]) === -1 ) {
 							matches.push(match[1]);
 							hasMatches = true;
 						}
@@ -99,7 +99,7 @@ angular.module("umbraco").controller("Iconator.Controller", function ($scope, $h
 	//////////////////////
 	// Scope functions
 	//////////////////////
-	
+
 	$scope.openIconPickerDialog = function() {
 		$scope.overlay.show = true;
 		$scope.overlay.icons = $scope.icons;
