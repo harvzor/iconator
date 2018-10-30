@@ -62,7 +62,7 @@ angular.module("umbraco").controller("Iconator.Controller", function ($scope, $h
 					// check if match has populated array
 					if (match != null && match.length > 1) {
 						//check if array already contains match and not on exclude list
-						if (!(matches.indexOf(match[1]) > 0) && !(excludeList.trim().split(/\s*,\s*/).indexOf(match[1]) > -1)) {
+						if (!(matches.indexOf(match[1]) > 0) && !(excludeList.trim().split(',').indexOf(match[1]) > -1)) {
 							matches.push(match[1]);
 							hasMatches = true;
 						}
