@@ -58,11 +58,11 @@ angular.module("umbraco").controller("Iconator.Controller", function ($scope, $h
 
 			if (hasMatches) {
 				var match;
+
 				while ((match = cssRegex.exec(cssText)) !== null) {
-					// check if match has populated array
+					// Check if match has populated array.
 					if (match != null && match.length > 1) {
-						//check if array already contains match and not on exclude list
-						if (matches.indexOf(match[1]) === -1 && excludeList.split(',').indexOf(match[1]) === -1 ) {
+						// Check if array already contains match and not on exclude list.
 						if (matches.indexOf(match[1]) === -1 && excludeList.trim().split(',').indexOf(match[1]) === -1) {
 							matches.push(match[1]);
 							hasMatches = true;
