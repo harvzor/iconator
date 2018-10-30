@@ -33,13 +33,13 @@ angular.module("umbraco").controller("Iconator.Controller", function ($scope, $h
 		var cssPath = $scope.model.config.cssPath;
 		var cssRegexPattern = $scope.model.config.cssRegex;
 		var excludeList = $scope.model.config.excludeList;
-		var iconPattern = $scope.model.config.iconPattern;
 		var cssRegex = new RegExp(cssRegexPattern, 'g');
 		var matches = [];
 		var isError = false;
+		var excludeArray = [];
 
-		if (excludeList == null) {
-			excludeList = "";
+		if (excludeList != null) {
+			excludeArray = excludeList.trim().split(/\s*,\s*/);
 		}
 
 		// Get the class names from the specified stylesheet,
@@ -63,7 +63,7 @@ angular.module("umbraco").controller("Iconator.Controller", function ($scope, $h
 					// Check if match has populated array.
 					if (match != null && match.length > 1) {
 						// Check if array already contains match and not on exclude list.
-						if (matches.indexOf(match[1]) === -1 && excludeList.trim().split(',').indexOf(match[1]) === -1) {
+						if (matches.indexOf(match[1]) === -1 && excludeArray.indexOf(match[1]) === -1) {
 							matches.push(match[1]);
 							hasMatches = true;
 						}
