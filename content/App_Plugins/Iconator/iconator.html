@@ -1,5 +1,6 @@
 <div ng-controller="Iconator.Controller" class="iconator">
 	<div class="iconator-icon">
+		<p ng-hide="modal.value" ng-bind="model.value"></p>
 		<span ng-hide="model.value" ng-click="openIconPickerDialog()">Pick an icon...</span>
 		<span style="font-size:32px;" ng-bind-html="renderIconPattern(model.value)" ng-click="openIconPickerDialog()"></span>
 	</div>
