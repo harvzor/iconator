@@ -2,9 +2,22 @@ Iconator
 ==
 _Property editor for Umbraco 7._
 
+## Screenshots
+
+Editing the data type:
+
+![Icon Picker Data Type](https://github.com/HarveyWilliams/Iconator/blob/umbraco7.4/screenshots/IconPickerDataType.png "Icon Picker Data Type")
+
+Using the data type in Umbraco:
+
+![Icon Picker Dialog](https://github.com/HarveyWilliams/Iconator/blob/umbraco7.4/screenshots/IconPickerDialog.png "Icon Picker Dialog")
+
+## Summary
+
 Iconator is a custom data type that allows an editor to select a class for a custom icon from a CSS file, but in a visual way. The class name is saved into the property value which can then be used in your view. This is useful because font files can be used for icons rather than selecting an image.
 
 This is a fork of https://github.com/marcemarc/monosnow.umbraco.uCssClassNameDropdown, partially redesigned to work seamlessly in Umbraco 7.
+
 
 ## Requirements
 
@@ -62,17 +75,7 @@ You have to manually create the data type in Umbraco yourself.
 6. Set the name of this data type, "Icon Picker" should do
 7. Save!
 8. Add this new data type to a document type in the settings section
-9. Donezo!
-
-## Screenshots
-
-Editing the data type:
-
-![Icon Picker Data Type](https://github.com/HarveyWilliams/Iconator/blob/umbraco7.4/screenshots/IconPickerDataType.png "Icon Picker Data Type")
-
-Using the data type in Umbraco:
-
-![Icon Picker Dialog](https://github.com/HarveyWilliams/Iconator/blob/umbraco7.4/screenshots/IconPickerDialog.png "Icon Picker Dialog")
+9. Done-zo!
 
 ## Contributing
 
