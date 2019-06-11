@@ -49,8 +49,11 @@ angular.module("umbraco").controller("Iconator.Controller", function ($scope, $h
 			url: cssPath,
 			cache: true
 		})
-		.success(function (data, status, headers, config) {
+		.then(function (data, status, headers, config) {
 			var cssText = data;
+            if (typeof cssText != 'string') {
+                cssText = cssText.data;
+            }
 			var hasMatches = cssRegex.test(cssText);
 
 			//reset regex
@@ -78,10 +81,6 @@ angular.module("umbraco").controller("Iconator.Controller", function ($scope, $h
 
 				notificationsService.error('An error has occured.', 'No matches in stylesheet for regex: ' + cssRegexPattern);
 			}
-		})
-		.error(function (data, status, headers, config) {
-			notificationsService.error('An error has occured.', 'Stylesheet or file ' + cssPath + ' not found on server.');
-			isError = true;
 		});
 
 		if (!/css$/.test(cssPath)) {
