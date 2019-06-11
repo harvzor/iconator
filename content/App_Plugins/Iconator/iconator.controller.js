@@ -81,7 +81,10 @@ angular.module("umbraco").controller("Iconator.Controller", function ($scope, $h
 
 				notificationsService.error('An error has occured.', 'No matches in stylesheet for regex: ' + cssRegexPattern);
 			}
-		});
+		}, function (data, status, headers, config) {
+			notificationsService.error('An error has occured.', 'Stylesheet or file ' + cssPath + ' not found on server.');
+			isError = true;
+ 		});
 
 		if (!/css$/.test(cssPath)) {
 			cssPath = cssPath.split('.')[0] + '.css';
